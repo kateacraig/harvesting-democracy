@@ -160,24 +160,26 @@ p {
 
 /* Buttons */
 .btn {
-  background-color: var(--white);
-  color: var(--light-blue);
+  background-color: transparent;
+  color: var(--white);
   padding: 0.8rem 1.3rem;
-  width: 300px;
-  border-radius: var(--radius-md);
-  border: 1.5px solid var(--light-blue);
-  font-weight: 600;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--white);
+  font-weight: 500;
   cursor: pointer;
   transition: var(--transition);
   display: inline-block;
   text-align: center;
   font-family: var(--font-body);
-  font-size: 1rem;
-  margin-top: 2rem;
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 4rem;
 }
 
 .btn:hover {
-  background-color: var(--light-blue);
+  background-color: var(--primary-color);
   border: 1.5px solid var(--white);
   color: var(--white);
 }
@@ -205,13 +207,13 @@ p {
 }
 
 .btn-donate-footer {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--black);
   height: 60px;
   width: 150px;
   padding: 0 20px;
   border-radius: 30px;
-  border: 1.5px solid var(--white);
+  border: 1.5px solid var(--black);
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
@@ -224,9 +226,9 @@ p {
 }
 
 .btn-donate-footer:hover {
-  background-color: var(--white);
-  border: 1.5px solid var(--primary-color);
-  color: var(--primary-color);
+  background-color: var(--black);
+  border: 1.5px solid var(--white);
+  color: var(--white);
 }
 
 .nav-menu > li > a.btn-donate {
@@ -430,12 +432,12 @@ nav {
 
 /* Hero Section */
 .hero {
-  padding: 115px 0;
+  padding: 90px 0 100px 0;
 }
 
 .hero h1 {
   font-weight: 700;
-  font-size: 110px;
+  font-size: 115px;
   color: var(--primary-color);
   text-align: center;
   line-height: 1.2;
@@ -454,100 +456,183 @@ nav {
     0.5px 0.5px 0 var(--primary-color);
 }
 
+.hero-btn-grid {
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  margin: 0 auto;
+}
+
+/* Tennsssee Section */
+.tennessee {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url(../images/tennessee-map.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 110px 0;
+}
+
+.tennessee-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.tennessee-grid-item-left {
+  background-color: rgba(13, 142, 84, 0.4);
+  padding: 20px;
+  border: 3px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+.tennessee-grid-item-left h2 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 600;
+
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+.tennessee-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.tennessee-stat-grid-item {
+  background-color: rgba(13, 142, 84, 0.4);
+  padding: 20px;
+  border: 3px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+}
+
+.tennessee-stat-grid-item h3 {
+  font-size: 65px;
+  text-align: center;
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+.tennessee-stat-grid-item h2 {
+  font-size: 26px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: -1rem;
+}
+
+/* Endorsed Candidates Slider Section */
+.endorsed-candidate-slider {
+  padding: 110px 0;
+}
+
+/* Carousel Container */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border: 5px solid white;
+  box-sizing: border-box;
+  margin-top: 2rem;
+}
+
+.candidate-carousel {
+  margin-top: 40px;
+  overflow: hidden;
+  width: 100%;
+}
+
+#candidateCarouselSlides {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* Carousel Slides Wrapper */
+.carousel-slides {
+  display: flex;
+  transition: transform;
+}
+
+/* Individual Slide */
+.carousel-slide {
+  flex: 0 0 25%;
+  min-width: 25%;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* Placeholder Styling */
+.carousel-placeholder {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-placeholder-icon {
+  width: 100%;
+  aspect-ratio: 5/4;
+  overflow: hidden;
+}
+
+.carousel-placeholder-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.carousel-placeholder-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.carousel-candidate-slide {
+  flex: 0 0 20%;
+  min-width: 20%;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* About carousel: 12:9 aspect ratio */
+.candidate-carousel .carousel-placeholder-icon {
+  aspect-ratio: 1/1;
+}
+
+/* Hide text overlay for about carousel */
+.candidate-carousel .carousel-placeholder-text {
+  display: none;
+}
+
 /* ==========================================
    About Page
    ========================================== */
 
 /* About Header */
-.about-header {
-  margin: 0;
-  padding: 0;
-  margin-top: 2rem;
-  padding-bottom: 1rem;
-}
-
-.about-header h1 {
-  font-family: "Knewave", system-ui;
-  font-size: 82px;
-  text-align: center;
-  font-weight: 400;
-  text-shadow: -1px -1px 0 var(--peach), 1px -1px 0 var(--peach),
-    -1px 1px 0 var(--peach), 1px 1px 0 var(--peach);
-}
-
-/* About Body */
-
-.about-ashley-grid {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-gap: 2rem;
-  margin-top: -2rem;
-}
-
-.about-ashley-photos img {
-  width: 255px;
-  height: auto;
-}
-
-.about-ashley-grid-item h3 {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 46px;
-}
-
-.about-ashley-grid-item p {
-  font-size: 18px;
-  line-height: 1.5;
-  font-family: "Noto Sans", sans-serif;
-}
-
-/* About CTA */
-
-.about-page-cta-grid {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 2rem;
-  margin-top: -6rem;
-}
-
-.about-page-cta-grid-item {
-  display: flex;
-  align-items: center;
-}
-
-.about-page-cta-grid-item h3 {
-  font-family: "Boogaloo";
-  font-size: 40px;
-}
-
-.btn-about-cta {
-  background-color: var(--purple);
-  color: var(--white);
-  height: 60px;
-  width: 300px;
-  border-radius: 30px;
-  border: 1.5px solid var(--white);
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-}
-
-.btn-about-cta:hover {
-  background-color: var(--white);
-  border: 1.5px solid var(--purple);
-  color: var(--purple);
-}
 
 /* ==========================================
    Footer
    ========================================== */
 footer {
-  margin-top: 4rem;
-  border-top: 2px solid var(--white);
+  color: var(--white);
+  background-color: var(--primary-color);
 }
 
 /* Footer Grid */
@@ -555,7 +640,10 @@ footer {
   display: grid;
   grid-template-columns: 1.5fr 2fr 1fr;
   grid-gap: 2rem;
-  margin-top: 3rem;
+}
+
+.footer-grid-item {
+  margin-top: 2rem;
 }
 
 .footer-mobile-links-grid {
@@ -586,13 +674,13 @@ footer {
 }
 
 .footer-donate-other a {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--black);
   height: 60px;
   width: 150px;
   padding: 0 20px;
   border-radius: 30px;
-  border: 1.5px solid var(--white);
+  border: 1.5px solid var(--black);
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
@@ -605,14 +693,15 @@ footer {
 }
 
 .footer-donate-other a:hover {
-  background-color: var(--white);
-  border: 1.5px solid var(--primary-color);
-  color: var(--primary-color);
+  background-color: var(--black);
+  border: 1.5px solid var(--white);
+  color: var(--white);
 }
 
 .footer-copyright {
   margin-top: 3rem;
   font-weight: 300;
+  padding: 0 0 20px 0;
 }
 
 .important-links li {
@@ -622,11 +711,10 @@ footer {
   line-height: 1.5;
   font-family: "Boogaloo";
   font-weight: 700;
-  color: var(--primary-color);
 }
 
 .important-links li:hover {
-  color: var(--black);
+  color: var(--white);
 }
 
 .footer-social-icons {
@@ -640,26 +728,13 @@ footer {
 }
 
 .footer-social-icon:hover {
-  color: var(--primary-color);
+  color: var(--black);
 }
 
 /* 1024px breakpoint */
 @media (max-width: 1024px) {
   .container {
     padding: 0 4rem;
-  }
-
-  .countdown-grid {
-    max-width: 500px;
-    gap: 20px;
-  }
-
-  .countdown-number {
-    font-size: 3rem;
-  }
-
-  .countdown-box {
-    padding: 32px 16px;
   }
 
   .header-content {
@@ -716,34 +791,10 @@ footer {
     justify-content: left;
     align-items: center;
   }
-
-  .slogan-ashley-grid-item h3 {
-    margin-top: -2rem;
-  }
 }
 
 /* 940px breakpoint */
 @media (max-width: 768px) {
-  .container {
-    padding: 0 3rem;
-  }
-
-  .countdown-grid {
-    max-width: 420px;
-    gap: 16px;
-  }
-
-  .countdown-number {
-    font-size: 2.5rem;
-  }
-
-  .countdown-label {
-    font-size: 0.9rem;
-  }
-
-  .countdown-box {
-    padding: 28px 14px;
-  }
 }
 
 /* 468px breakpoint */
@@ -756,13 +807,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .hero-countdown-clock-mobile h2 {
-    text-align: center;
-    color: var(--yellow);
-    font-size: 36px;
-    margin-top: 2rem;
-  }
-
   .hero h1 {
     font-family: "Boogaloo";
     font-size: 100px;
@@ -770,57 +814,13 @@ footer {
     margin-top: 0;
   }
 
-  .hero-last-name {
-    margin-top: -3rem;
-  }
-
-  .hero-name h2 {
+  .hero h2 {
     font-family: "Boogaloo";
     font-size: 20px;
     text-align: right;
     margin: 0;
     padding: 0;
     margin-top: -2rem;
-  }
-
-  .hero-oak-leaf {
-    height: 20px;
-    width: auto;
-    margin-right: -5px;
-    margin-left: -5px;
-  }
-
-  .countdown-container {
-    width: 100%;
-    text-align: left;
-  }
-
-  .countdown-grid {
-    max-width: 100%;
-    gap: 12px;
-    padding: 0 16px;
-    margin-top: -2rem;
-  }
-
-  .countdown-number {
-    font-size: 2rem;
-  }
-
-  .countdown-label {
-    font-size: 0.8rem;
-  }
-
-  .countdown-box {
-    padding: 24px 12px;
-    border-radius: 8px;
-  }
-
-  .hero-countdown-clock {
-    display: none;
-  }
-
-  .hero-countdown-clock-mobile {
-    display: grid;
   }
 
   footer {
@@ -849,47 +849,15 @@ footer {
     font-family: "Boogaloo";
   }
 
-  .slogan-ashley-grid,
-  .slogan-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .slogan-grid {
-    margin-top: 4rem;
-  }
-
-  .slogan-ashley-grid-item img {
-    width: 300px;
-    margin-top: 1rem;
-  }
-
-  .slogan-ashley-grid-item h3 {
-    margin-top: -2rem;
-    text-align: center;
-  }
-
-  .slogan h2 {
-    font-size: 36px;
-  }
-
-  .btn-volunteer-slogan {
-    margin-bottom: 3rem;
-    margin-top: -1rem;
-  }
-
-  .btn-donate-slogan {
-    margin-top: -1rem;
-  }
-
   .footer-follow-ashley {
     display: none;
   }
 
-  .footer-follow-ashley-mobile {
+  .footer-follow-mobile {
     display: grid;
   }
 
-  .footer-follow-ashley-mobile h4 {
+  .footer-follow-mobile h4 {
     font-size: 1.3rem;
   }
 
