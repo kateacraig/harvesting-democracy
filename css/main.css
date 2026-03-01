@@ -558,14 +558,6 @@ footer {
 }
 
 /* Footer Logo */
-.footer-logo img {
-  width: 200px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  margin-top: -50px;
-}
-
 .footer-donate-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -614,7 +606,7 @@ footer {
 }
 
 .footer-copyright {
-  margin-top: -1rem;
+  margin-top: 3rem;
   font-weight: 300;
 }
 
@@ -625,10 +617,11 @@ footer {
   line-height: 1.5;
   font-family: "Boogaloo";
   font-weight: 700;
+  color: var(--primary-color);
 }
 
 .important-links li:hover {
-  color: var(--primary-color);
+  color: var(--black);
 }
 
 .footer-social-icons {
