@@ -1,0 +1,910 @@
+/* CSS Variables */
+:root {
+  /* Brand Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --primary-color: #255f3e;
+  --primary-red: rgb(172, 13, 13);
+  --primary-blue: rgb(3, 3, 235);
+
+  /* Typography */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Montserrat", sans-serif;
+
+  /* Transitions */
+  --transition: all 150ms ease-in-out;
+
+  /* Shadows */
+  --image-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Border Radius */
+  --radius-sm: 5px;
+  --radius-md: 10px;
+
+  /* Border */
+  --border: 2px solid var(--white);
+
+  /* Breakpoints */
+  --desktop: 1200px;
+  --tablet: 10250px;
+  --small-tablet: 935px;
+  --mobile: 460px;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.red {
+  color: var(--primary-red);
+}
+
+.blue {
+  color: var(--primary-blue);
+}
+
+.text-left {
+  text-align: left;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--black);
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+section {
+  padding: 100px 0;
+}
+
+section.hero {
+  padding: 150px 50;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.border {
+  border: var(--border);
+  margin: 0 50px;
+}
+
+.blue-border {
+  border: 5px solid var(--light-blue);
+  padding: 20px;
+}
+
+.blue-project-border {
+  border: 5px solid var(--light-blue);
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--white);
+  color: var(--light-blue);
+  padding: 0.8rem 1.3rem;
+  width: 300px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--light-blue);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.btn:hover {
+  background-color: var(--light-blue);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.btn-donate {
+  background-color: var(--primary-color);
+  color: var(--white);
+  height: 60px;
+  width: 130px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.btn-donate:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--primary-color);
+  color: var(--white);
+}
+
+.btn-donate-footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  height: 60px;
+  width: 150px;
+  padding: 0 20px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-donate-footer:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.nav-menu > li > a.btn-donate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: var(--desktop);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content {
+  max-width: 1000px;
+}
+
+/* Header Styles */
+header {
+  background: transparent;
+  padding: 1rem 0;
+  position: relative;
+  z-index: 2;
+  margin-top: -4rem;
+}
+
+.header-content {
+  max-width: var(--desktop);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  order: 1;
+}
+
+.logo {
+  width: 175px;
+  height: auto;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Navigation */
+nav {
+  order: 2;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-menu > li {
+  position: relative;
+}
+
+.nav-menu > li > a {
+  color: var(--white);
+  text-shadow: -1px -1px 0 var(--primary-color), 1px -1px 0 var(--primary-color),
+    -1px 1px 0 var(--primary-color), 1px 1px 0 var(--primary-color);
+  font-weight: 900;
+  padding: 0.5rem 0.5rem;
+  display: block;
+  font-size: 1.7rem;
+}
+
+.nav-menu > li > a:hover {
+  color: var(--primary-color);
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+/* Video background wrapper */
+.nav-header {
+  position: relative;
+}
+
+/* The actual background video */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark overlay on top of the video */
+.nav-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+  pointer-events: none; /* ← ADD THIS */
+}
+
+/* Ensure header and hero sit above the video and overlay */
+.nav-header header,
+.nav-header .hero {
+  position: relative;
+  z-index: 2;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: var(--white);
+  background-color: var(--black);
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0;
+  z-index: 1001;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  display: block;
+  transition: var(--transition);
+}
+
+.dropdown-content a:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.dropdown > a::after {
+  content: "";
+  display: inline-block;
+  margin-left: 8px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--white);
+  vertical-align: middle;
+  transition: var(--transition);
+}
+
+.dropdown:hover > a::after {
+  border-top-color: var(--dark-gray);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--white);
+  margin: 3px 0;
+  transition: var(--transition);
+  border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ==========================================
+   Home Page
+   ========================================== */
+
+/* Hero Section */
+.hero {
+  padding: 115px 0;
+}
+
+.hero h1 {
+  font-weight: 700;
+  font-size: 110px;
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 40px;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+}
+
+.hero h2 {
+  font-size: 35px;
+  color: var(--white);
+  text-align: center;
+  font-size: 45px;
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+/* ==========================================
+   About Page
+   ========================================== */
+
+/* About Header */
+.about-header {
+  margin: 0;
+  padding: 0;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.about-header h1 {
+  font-family: "Knewave", system-ui;
+  font-size: 82px;
+  text-align: center;
+  font-weight: 400;
+  text-shadow: -1px -1px 0 var(--peach), 1px -1px 0 var(--peach),
+    -1px 1px 0 var(--peach), 1px 1px 0 var(--peach);
+}
+
+/* About Body */
+
+.about-ashley-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 2rem;
+  margin-top: -2rem;
+}
+
+.about-ashley-photos img {
+  width: 255px;
+  height: auto;
+}
+
+.about-ashley-grid-item h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 46px;
+}
+
+.about-ashley-grid-item p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* About CTA */
+
+.about-page-cta-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 2rem;
+  margin-top: -6rem;
+}
+
+.about-page-cta-grid-item {
+  display: flex;
+  align-items: center;
+}
+
+.about-page-cta-grid-item h3 {
+  font-family: "Boogaloo";
+  font-size: 40px;
+}
+
+.btn-about-cta {
+  background-color: var(--purple);
+  color: var(--white);
+  height: 60px;
+  width: 300px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.btn-about-cta:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--purple);
+  color: var(--purple);
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+footer {
+  margin-top: 4rem;
+  border-top: 2px solid var(--white);
+}
+
+/* Footer Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+
+.footer-mobile-links-grid {
+  display: none;
+}
+
+/* Footer Logo */
+.footer-logo img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: -50px;
+}
+
+.footer-donate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.footer-donate-other {
+  margin-top: 1rem;
+}
+
+.footer-follow-mobile {
+  display: none;
+}
+
+.footer-follow h4 {
+  font-size: 1.3rem;
+}
+
+.footer-follow a:hover {
+  color: var(--purple);
+}
+
+.footer-donate-other a {
+  background-color: var(--primary-color);
+  color: var(--white);
+  height: 60px;
+  width: 150px;
+  padding: 0 20px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer-donate-other a:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.footer-copyright {
+  margin-top: -1rem;
+  font-weight: 300;
+}
+
+.important-links li {
+  list-style: none;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: "Boogaloo";
+  font-weight: 700;
+}
+
+.important-links li:hover {
+  color: var(--primary-color);
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+
+.footer-social-icon {
+  font-size: 40px;
+}
+
+.footer-social-icon:hover {
+  color: var(--primary-color);
+}
+
+/* 1024px breakpoint */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+  }
+
+  .countdown-grid {
+    max-width: 500px;
+    gap: 20px;
+  }
+
+  .countdown-number {
+    font-size: 3rem;
+  }
+
+  .countdown-box {
+    padding: 32px 16px;
+  }
+
+  .header-content {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: end;
+    order: 3;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    color: white;
+    background-color: var(--peach);
+    padding: 1rem 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .nav-menu > li {
+    width: 100%;
+  }
+
+  .nav-menu > li > a {
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-donate {
+    width: 40px;
+    padding: 0;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .slogan-ashley-grid-item h3 {
+    margin-top: -2rem;
+  }
+}
+
+/* 940px breakpoint */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 3rem;
+  }
+
+  .countdown-grid {
+    max-width: 420px;
+    gap: 16px;
+  }
+
+  .countdown-number {
+    font-size: 2.5rem;
+  }
+
+  .countdown-label {
+    font-size: 0.9rem;
+  }
+
+  .countdown-box {
+    padding: 28px 14px;
+  }
+}
+
+/* 468px breakpoint */
+@media (max-width: 468px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-countdown-clock-mobile h2 {
+    text-align: center;
+    color: var(--yellow);
+    font-size: 36px;
+    margin-top: 2rem;
+  }
+
+  .hero h1 {
+    font-family: "Boogaloo";
+    font-size: 100px;
+    text-align: right;
+    margin-top: 0;
+  }
+
+  .hero-last-name {
+    margin-top: -3rem;
+  }
+
+  .hero-name h2 {
+    font-family: "Boogaloo";
+    font-size: 20px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    margin-top: -2rem;
+  }
+
+  .hero-oak-leaf {
+    height: 20px;
+    width: auto;
+    margin-right: -5px;
+    margin-left: -5px;
+  }
+
+  .countdown-container {
+    width: 100%;
+    text-align: left;
+  }
+
+  .countdown-grid {
+    max-width: 100%;
+    gap: 12px;
+    padding: 0 16px;
+    margin-top: -2rem;
+  }
+
+  .countdown-number {
+    font-size: 2rem;
+  }
+
+  .countdown-label {
+    font-size: 0.8rem;
+  }
+
+  .countdown-box {
+    padding: 24px 12px;
+    border-radius: 8px;
+  }
+
+  .hero-countdown-clock {
+    display: none;
+  }
+
+  .hero-countdown-clock-mobile {
+    display: grid;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-mobile-links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .important-links {
+    display: none;
+  }
+
+  .important-links-mobile li {
+    list-style: none;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: "Boogaloo";
+  }
+
+  .slogan-ashley-grid,
+  .slogan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slogan-grid {
+    margin-top: 4rem;
+  }
+
+  .slogan-ashley-grid-item img {
+    width: 300px;
+    margin-top: 1rem;
+  }
+
+  .slogan-ashley-grid-item h3 {
+    margin-top: -2rem;
+    text-align: center;
+  }
+
+  .slogan h2 {
+    font-size: 36px;
+  }
+
+  .btn-volunteer-slogan {
+    margin-bottom: 3rem;
+    margin-top: -1rem;
+  }
+
+  .btn-donate-slogan {
+    margin-top: -1rem;
+  }
+
+  .footer-follow-ashley {
+    display: none;
+  }
+
+  .footer-follow-ashley-mobile {
+    display: grid;
+  }
+
+  .footer-follow-ashley-mobile h4 {
+    font-size: 1.3rem;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-logo img {
+    margin-top: 0.5rem;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+  }
+}
