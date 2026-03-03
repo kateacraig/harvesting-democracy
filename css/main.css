@@ -301,6 +301,7 @@ nav {
   padding: 0.5rem 0.5rem;
   display: block;
   font-size: 1.7rem;
+  padding-bottom: 0.75rem;
 }
 
 .nav-menu > li > a:hover {
@@ -352,13 +353,13 @@ nav {
   position: absolute;
   top: 100%;
   left: 0;
-  color: var(--white);
   background-color: var(--black);
   min-width: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius-sm);
   padding: 0.5rem 0;
-  z-index: 1001;
+  z-index: 9999;
+  margin-top: -5px; /* ← closes the gap so menu doesn't disappear */
 }
 
 .dropdown:hover .dropdown-content {
@@ -370,15 +371,19 @@ nav {
 }
 
 .dropdown-content a {
-  color: var(--white);
+  color: var(--white) !important;
   padding: 0.75rem 1.5rem;
   display: block;
-  transition: var(--transition);
+  font-size: 1rem;
+  font-weight: 400;
+  text-shadow: none !important;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
 }
 
 .dropdown-content a:hover {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: var(--primary-color) !important;
+  color: var(--white) !important;
 }
 
 .dropdown > a::after {
@@ -390,10 +395,6 @@ nav {
   border-top: 6px solid var(--white);
   vertical-align: middle;
   transition: var(--transition);
-}
-
-.dropdown:hover > a::after {
-  border-top-color: var(--dark-gray);
 }
 
 /* Hamburger Menu */
