@@ -938,6 +938,7 @@ footer p {
 
   footer {
     text-align: center;
+    overflow: hidden;
   }
 
   .footer-grid {
