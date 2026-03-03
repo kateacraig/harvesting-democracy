@@ -26,8 +26,8 @@
   --border: 2px solid var(--white);
 
   /* Breakpoints */
-  --desktop: 1200px;
-  --tablet: 10250px;
+  --desktop: 1100px;
+  --tablet: 1025px;
   --small-tablet: 935px;
   --mobile: 460px;
 }
@@ -187,7 +187,7 @@ p {
 .btn-donate {
   background-color: var(--primary-color);
   color: var(--white);
-  height: 60px;
+  height: 50px;
   width: 130px;
   border-radius: 30px;
   border: 1.5px solid var(--white);
@@ -197,7 +197,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
 }
 
 .btn-donate:hover {
@@ -209,8 +208,8 @@ p {
 .btn-donate-footer {
   background-color: var(--white);
   color: var(--black);
-  height: 60px;
-  width: 150px;
+  height: 50px;
+  width: 140px;
   padding: 0 20px;
   border-radius: 30px;
   border: 1.5px solid var(--black);
@@ -333,7 +332,7 @@ nav {
   inset: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
   z-index: 1;
-  pointer-events: none; /* ← ADD THIS */
+  pointer-events: none;
 }
 
 /* Ensure header and hero sit above the video and overlay */
@@ -437,7 +436,7 @@ nav {
 
 .hero h1 {
   font-weight: 700;
-  font-size: 115px;
+  font-size: 100px;
   color: var(--primary-color);
   text-align: center;
   line-height: 1.2;
@@ -499,7 +498,6 @@ nav {
   font-size: 36px;
   text-align: center;
   font-weight: 600;
-
   text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
     -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
 }
@@ -532,39 +530,50 @@ nav {
   margin-top: -1rem;
 }
 
-/* Endorsed Candidates Slider Section */
-.endorsed-candidate-slider {
-  padding: 110px 0;
+/* Carousel Container */
+.endorsed-candidate-header h2 {
+  color: var(--white);
+  text-shadow: -1.5px -1.5px 0 var(--black), 1.5px -1.5px 0 var(--black),
+    -1.5px 1.5px 0 var(--black), 1.5px 1.5px 0 var(--black);
+  font-size: 46px;
 }
 
-/* Carousel Container */
+.endorsed-candidate-slider {
+  background-image: linear-gradient(
+      rgba(194, 191, 191, 0.6),
+      rgba(21, 21, 158, 0.4),
+      rgba(21, 21, 158, 0.4),
+      rgba(3, 3, 235, 0.4)
+    ),
+    url(../images/vote-buttons.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px 0;
+}
+
 .carousel {
   width: 100%;
   overflow: hidden;
   position: relative;
-  border: 5px solid white;
   box-sizing: border-box;
   margin-top: 2rem;
+  border: 5px solid var(--primary-color);
+  border-radius: 15px;
 }
 
 .candidate-carousel {
-  margin-top: 40px;
-  overflow: hidden;
-  width: 100%;
-}
-
-#candidateCarouselSlides {
-  display: flex;
-  flex-wrap: nowrap;
+  max-width: 1200px;
+  margin: 40px auto 0;
 }
 
 /* Carousel Slides Wrapper */
 .carousel-slides {
   display: flex;
-  transition: transform;
+  transition: transform 1s ease-in-out;
+  will-change: transform;
 }
 
-/* Individual Slide */
+/* Base slide */
 .carousel-slide {
   flex: 0 0 25%;
   min-width: 25%;
@@ -572,7 +581,15 @@ nav {
   border: none;
 }
 
-/* Placeholder Styling */
+/* Candidate slide — 4 per view = 25% each */
+.carousel-candidate-slide {
+  flex: 0 0 25%;
+  min-width: 25%;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* Placeholder */
 .carousel-placeholder {
   width: 100%;
   position: relative;
@@ -580,7 +597,7 @@ nav {
 
 .carousel-placeholder-icon {
   width: 100%;
-  aspect-ratio: 5/4;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 
@@ -589,34 +606,8 @@ nav {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
 }
 
-.carousel-placeholder-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-size: 14px;
-}
-
-.carousel-candidate-slide {
-  flex: 0 0 20%;
-  min-width: 20%;
-  box-sizing: border-box;
-  border: none;
-}
-
-/* About carousel: 12:9 aspect ratio */
-.candidate-carousel .carousel-placeholder-icon {
-  aspect-ratio: 1/1;
-}
-
-/* Hide text overlay for about carousel */
 .candidate-carousel .carousel-placeholder-text {
   display: none;
 }
@@ -632,7 +623,28 @@ nav {
    ========================================== */
 footer {
   color: var(--white);
-  background-color: var(--primary-color);
+  background: linear-gradient(
+    180deg,
+    rgba(59, 150, 95, 1) 0%,
+    rgba(37, 120, 72, 1) 30%,
+    rgba(37, 95, 62, 1) 100%
+  );
+  overflow: hidden;
+}
+
+footer h3 {
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+footer h4 {
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+footer p {
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
 }
 
 /* Footer Grid */
@@ -667,6 +679,8 @@ footer {
 
 .footer-follow h4 {
   font-size: 1.3rem;
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
 }
 
 .footer-follow a:hover {
@@ -676,7 +690,7 @@ footer {
 .footer-donate-other a {
   background-color: var(--white);
   color: var(--black);
-  height: 60px;
+  height: 50px;
   width: 150px;
   padding: 0 20px;
   border-radius: 30px;
@@ -702,19 +716,22 @@ footer {
   margin-top: 3rem;
   font-weight: 300;
   padding: 0 0 20px 0;
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
 }
 
 .important-links li {
   list-style: none;
   padding: 0;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   line-height: 1.5;
-  font-family: "Boogaloo";
   font-weight: 700;
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
 }
 
 .important-links li:hover {
-  color: var(--white);
+  color: var(--black);
 }
 
 .footer-social-icons {
@@ -739,35 +756,42 @@ footer {
 
   .header-content {
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center; /* ← was flex-start, center aligns logo and hamburger */
     margin-bottom: 8px;
+    position: relative; /* ← needed for the dropdown menu to position correctly */
   }
 
   .logo-container {
+    order: 1;
     display: flex;
     align-items: center;
   }
 
   .hamburger {
     display: flex;
-    align-items: end;
-    order: 3;
+    align-items: center;
+    order: 2;
   }
 
   nav {
-    order: 3;
-    width: 100%;
-    margin-top: 1rem;
+    order: 2;
+    width: auto;
+    margin-top: 0;
   }
 
   .nav-menu {
     display: none;
     flex-direction: column;
+    position: absolute; /* ← takes it out of flow so it doesn't push content */
+    top: 100%;
+    left: 0;
+    right: 0;
     width: 100%;
     gap: 0;
     color: white;
-    background-color: var(--peach);
+    background-color: var(--primary-color);
     padding: 1rem 0;
+    z-index: 1000;
   }
 
   .nav-menu.active {
@@ -786,10 +810,48 @@ footer {
   }
 
   .btn-donate {
-    width: 40px;
-    padding: 0;
-    justify-content: left;
+    width: auto;
+    padding: 0.5rem 1rem;
+    justify-content: flex-start;
     align-items: center;
+  }
+
+  /* Hero adjustments */
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero h1 {
+    font-size: 75px;
+  }
+
+  .hero h2 {
+    font-size: 35px;
+  }
+
+  /* Tennsssee Section Adjustments */
+  .tennessee {
+    padding: 60px 0;
+  }
+
+  .tennessee-grid-item-left h2 {
+    font-size: 32px;
+  }
+
+  .tennessee-stat-grid-item h3 {
+    font-size: 55px;
+  }
+
+  .tennessee-stat-grid-item h2 {
+    font-size: 24px;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Carousel adjustments */
+  .carousel-slide {
+    flex: 0 0 25%;
+    min-width: 25%;
   }
 }
 
@@ -803,25 +865,76 @@ footer {
     padding: 0 2rem;
   }
 
+  /* Hero Section Adjustments */
   .hero-grid {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    padding: 50px 0;
+  }
+
   .hero h1 {
-    font-family: "Boogaloo";
-    font-size: 100px;
-    text-align: right;
-    margin-top: 0;
+    font-size: 70px;
   }
 
   .hero h2 {
-    font-family: "Boogaloo";
-    font-size: 20px;
-    text-align: right;
-    margin: 0;
-    padding: 0;
-    margin-top: -2rem;
+    font-size: 35px;
+    margin-bottom: 2rem;
   }
+
+  .hero-btn-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 1;
+  }
+
+  .btn {
+    padding: 0.8rem 1.3rem;
+    width: 250px;
+    border-radius: 30px;
+    border: 3px solid var(--white);
+    font-size: 1.2rem;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Tennsssee Section Adjustments */
+  .tennessee {
+    padding: 80px 0;
+  }
+
+  .tennessee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tennessee-grid-item-left h2 {
+    font-size: 30px;
+  }
+
+  .tennessee-stat-grid-item h3 {
+    font-size: 60px;
+  }
+
+  .tennessee-stat-grid-item h2 {
+    font-size: 22px;
+  }
+
+  /* Endorsed Candidates Section Adjustments */
+
+  .endorsed-candidate-header h2 {
+    font-size: 55px;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+
+  .candidate-carousel .carousel-placeholder-icon {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Footer Section Adjustments */
 
   footer {
     text-align: center;
@@ -831,25 +944,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .footer-mobile-links-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
-  }
-
-  .important-links {
-    display: none;
-  }
-
-  .important-links-mobile li {
-    list-style: none;
-    padding: 0;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    font-family: "Boogaloo";
-  }
-
-  .footer-follow-ashley {
+  .footer-follow {
     display: none;
   }
 
@@ -864,6 +959,10 @@ footer {
   .footer-social-icons {
     display: flex;
     justify-content: center;
+  }
+
+  .footer-follow-mobile {
+    margin-top: 2rem;
   }
 
   .footer-logo img {
