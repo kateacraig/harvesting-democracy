@@ -254,7 +254,6 @@ header {
   padding: 1rem 0;
   position: relative;
   z-index: 2;
-  margin-top: -4rem;
 }
 
 .header-content {
@@ -313,6 +312,7 @@ nav {
 /* Video background wrapper */
 .nav-header {
   position: relative;
+  min-height: 100vh; /* ← ensures the video background fills the screen */
 }
 
 /* The actual background video */
@@ -359,7 +359,16 @@ nav {
   border-radius: var(--radius-sm);
   padding: 0.5rem 0;
   z-index: 9999;
-  margin-top: -5px; /* ← closes the gap so menu doesn't disappear */
+}
+
+/* Invisible bridge that fills the gap between the link and dropdown */
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -15px; /* ← reaches UP 15px above the dropdown */
+  left: 0;
+  right: 0;
+  height: 15px; /* ← covers the gap */
 }
 
 .dropdown:hover .dropdown-content {
