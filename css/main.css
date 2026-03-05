@@ -146,6 +146,7 @@ p {
 
 .link a {
   text-decoration: underline var(--primary-color);
+  font-weight: 600;
 }
 
 .link a:hover {
