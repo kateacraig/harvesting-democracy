@@ -144,18 +144,12 @@ p {
   margin-top: 4rem;
 }
 
-.border {
-  border: var(--border);
-  margin: 0 50px;
+.link a {
+  text-decoration: underline var(--primary-color);
 }
 
-.blue-border {
-  border: 5px solid var(--light-blue);
-  padding: 20px;
-}
-
-.blue-project-border {
-  border: 5px solid var(--light-blue);
+.link a:hover {
+  color: var(--primary-color);
 }
 
 /* Buttons */
@@ -711,6 +705,21 @@ nav {
 /* About Section */
 .about-section {
   padding: 2rem 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+    url(../images/rural-farm-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-section-text-box {
+  background-color: rgba(216, 210, 211, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.about-section h2 {
+  margin-bottom: 2rem;
 }
 
 .about-section-content {
@@ -724,8 +733,8 @@ nav {
 
 .about-us-video iframe {
   display: block;
-  width: 360px;
-  height: 215px;
+  width: 400px;
+  aspect-ratio: 16 / 9;
 }
 
 .about-section-content::after {
@@ -743,6 +752,13 @@ nav {
 
 /* About Kate Section */
 .about-kate {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(../images/kate-campaign-car.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 2rem 0;
 }
 
@@ -752,8 +768,21 @@ nav {
   grid-gap: 2rem;
 }
 
+.kate-grid-item-text {
+  background-color: rgba(216, 210, 211, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.kate-grid-item-image {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
 .kate-grid-item img {
-  width: 300px;
+  width: 350px;
   height: auto;
   border: 3px solid var(--primary-color);
   border-radius: 20px;
