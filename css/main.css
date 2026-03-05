@@ -312,7 +312,7 @@ nav {
 /* Video background wrapper */
 .nav-header {
   position: relative;
-  min-height: 100vh; /* ← ensures the video background fills the screen */
+  min-height: 100vh;
 }
 
 /* The actual background video */
@@ -324,6 +324,7 @@ nav {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  pointer-events: none;
 }
 
 /* Dark overlay on top of the video */
@@ -340,7 +341,7 @@ nav {
 .nav-header header,
 .nav-header .hero {
   position: relative;
-  z-index: 2;
+  z-index: 100; /* ← was 2, increase so dropdown clears the video layer */
 }
 
 /* Dropdown Menu */
@@ -365,10 +366,10 @@ nav {
 .dropdown-content::before {
   content: "";
   position: absolute;
-  top: -15px; /* ← reaches UP 15px above the dropdown */
+  top: -20px; /* ← increase from -15px to -20px */
   left: 0;
   right: 0;
-  height: 15px; /* ← covers the gap */
+  height: 20px; /* ← match the top value */
 }
 
 .dropdown:hover .dropdown-content {
@@ -623,10 +624,141 @@ nav {
 }
 
 /* ==========================================
+   Pages Header Content
+   ========================================== */
+/* All Pages Other Than Home Header */
+.nav-header-pages {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url(../images/small-town-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 0;
+}
+
+.nav-menu-pages {
+  margin-top: -30px;
+}
+
+.logo-container-pages img {
+  margin-top: -20px;
+}
+
+.pages-header {
+  margin: 0;
+  padding: 0;
+  margin-bottom: -20px;
+}
+
+.pages-header h1 {
+  font-weight: 700;
+  font-size: 100px;
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+  margin-top: -10px;
+}
+
+.nav-menu-pages > li > a {
+  color: var(--primary-color);
+  text-shadow: -0.25px -0.25px 0 var(--white), 0.25px -0.25px 0 var(--white),
+    -0.25px 0.25px 0 var(--white), 0.25px 0.25px 0 var(--white);
+  font-weight: 900;
+  padding: 0.5rem 0.5rem;
+  display: block;
+  font-size: 1.7rem;
+  padding-bottom: 0.75rem;
+}
+
+.nav-menu > li > a:hover {
+  color: var(--black);
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+.btn-donate {
+  background-color: var(--primary-color);
+  color: var(--white) !important;
+  height: 50px;
+  width: 130px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 400 !important;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-donate:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  font-weight: 400 !important;
+  text-shadow: none !important;
+}
+
+/* ==========================================
    About Page
    ========================================== */
+/* About Section */
+.about-section {
+  padding: 2rem 0;
+}
 
-/* About Header */
+.about-section-content {
+  max-width: 1100px;
+}
+
+.about-us-video {
+  float: left;
+  margin: 0 2rem 1rem 0;
+}
+
+.about-us-video iframe {
+  display: block;
+  width: 360px;
+  height: 215px;
+}
+
+.about-section-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Clearfix so the section doesn't collapse */
+.about-section-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* About Kate Section */
+.about-kate {
+  padding: 2rem 0;
+}
+
+.about-kate-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2rem;
+}
+
+.kate-grid-item img {
+  width: 300px;
+  height: auto;
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+}
 
 /* ==========================================
    Footer
