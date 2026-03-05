@@ -15,7 +15,7 @@
   --transition: all 150ms ease-in-out;
 
   /* Shadows */
-  --image-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+  --image-shadow: 4px 5px 6px rgba(0, 0, 0, 0.3);
   --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   /* Border Radius */
@@ -546,10 +546,11 @@ nav {
 
 .endorsed-candidate-slider {
   background-image: linear-gradient(
-      rgba(194, 191, 191, 0.6),
-      rgba(21, 21, 158, 0.4),
-      rgba(21, 21, 158, 0.4),
-      rgba(3, 3, 235, 0.4)
+      rgba(0, 0, 0, 0.6),
+      rgba(163, 159, 159, 0.6),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.8)
     ),
     url(../images/vote-buttons.jpeg);
   background-repeat: no-repeat;
@@ -672,6 +673,7 @@ nav {
   border: 3px solid var(--primary-color);
   border-radius: 20px;
   padding: 30px;
+  box-shadow: var(--image-shadow);
 }
 
 .about-section h2 {
@@ -693,6 +695,7 @@ nav {
   aspect-ratio: 16 / 9;
   border-radius: 20px;
   border: 3px solid var(--primary-color);
+  box-shadow: var(--image-shadow);
 }
 
 .about-section-content::after {
@@ -731,6 +734,7 @@ nav {
   border: 3px solid var(--primary-color);
   border-radius: 20px;
   padding: 30px;
+  box-shadow: var(--image-shadow);
 }
 
 .kate-grid-item-image {
@@ -744,7 +748,7 @@ nav {
   height: auto;
   border: 3px solid var(--primary-color);
   border-radius: 20px;
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--image-shadow);
 }
 
 /* ==========================================
