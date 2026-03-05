@@ -622,16 +622,15 @@ nav {
    ========================================== */
 /* All Pages Other Than Home Header */
 .nav-header-pages {
+  padding: 20px 0;
   background-image: linear-gradient(
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.4)
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
     ),
-    url(../images/small-town-header.jpg);
+    url(../images/rural-farm-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 20px 0;
 }
 
 .nav-menu-pages {
@@ -659,56 +658,12 @@ nav {
   margin-top: -10px;
 }
 
-.nav-menu-pages > li > a {
-  color: var(--primary-color);
-  text-shadow: -0.25px -0.25px 0 var(--white), 0.25px -0.25px 0 var(--white),
-    -0.25px 0.25px 0 var(--white), 0.25px 0.25px 0 var(--white);
-  font-weight: 900;
-  padding: 0.5rem 0.5rem;
-  display: block;
-  font-size: 1.7rem;
-  padding-bottom: 0.75rem;
-}
-
-.nav-menu > li > a:hover {
-  color: var(--black);
-  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
-    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
-}
-
-.btn-donate {
-  background-color: var(--primary-color);
-  color: var(--white) !important;
-  height: 50px;
-  width: 130px;
-  border-radius: 30px;
-  border: 1.5px solid var(--white);
-  font-weight: 400 !important;
-  cursor: pointer;
-  transition: var(--transition);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-donate:hover {
-  background-color: var(--white);
-  border: 1.5px solid var(--primary-color) !important;
-  color: var(--primary-color) !important;
-  font-weight: 400 !important;
-  text-shadow: none !important;
-}
-
 /* ==========================================
    About Page
    ========================================== */
 /* About Section */
 .about-section {
   padding: 2rem 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
-    url(../images/rural-farm-background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .about-section-text-box {
