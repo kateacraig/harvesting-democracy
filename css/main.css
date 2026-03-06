@@ -279,7 +279,7 @@ nav {
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -294,7 +294,7 @@ nav {
   font-weight: 900;
   padding: 0.5rem 0.5rem;
   display: block;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   padding-bottom: 0.75rem;
 }
 
@@ -337,69 +337,6 @@ nav {
 .nav-header .hero {
   position: relative;
   z-index: 100; /* ← was 2, increase so dropdown clears the video layer */
-}
-
-/* Dropdown Menu */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--black);
-  min-width: 250px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius-sm);
-  padding: 0.5rem 0;
-  z-index: 9999;
-}
-
-/* Invisible bridge that fills the gap between the link and dropdown */
-.dropdown-content::before {
-  content: "";
-  position: absolute;
-  top: -20px; /* ← increase from -15px to -20px */
-  left: 0;
-  right: 0;
-  height: 20px; /* ← match the top value */
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content li {
-  list-style: none;
-}
-
-.dropdown-content a {
-  color: var(--white) !important;
-  padding: 0.75rem 1.5rem;
-  display: block;
-  font-size: 1rem;
-  font-weight: 400;
-  text-shadow: none !important;
-  cursor: pointer;
-  transition: background-color 150ms ease-in-out;
-}
-
-.dropdown-content a:hover {
-  background-color: var(--primary-color) !important;
-  color: var(--white) !important;
-}
-
-.dropdown > a::after {
-  content: "";
-  display: inline-block;
-  margin-left: 8px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid var(--white);
-  vertical-align: middle;
-  transition: var(--transition);
 }
 
 /* Hamburger Menu */
