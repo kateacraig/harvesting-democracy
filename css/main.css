@@ -333,10 +333,14 @@ nav {
 }
 
 /* Ensure header and hero sit above the video and overlay */
-.nav-header header,
 .nav-header .hero {
   position: relative;
-  z-index: 100; /* ← was 2, increase so dropdown clears the video layer */
+  z-index: 2;
+}
+
+.nav-header header {
+  position: relative;
+  z-index: 9999;
 }
 
 /* Hamburger Menu */
@@ -824,11 +828,16 @@ footer p {
     padding: 0 4rem;
   }
 
+  header {
+    position: relative;
+    z-index: 99999;
+  }
+
   .header-content {
     flex-wrap: wrap;
-    align-items: center; /* ← was flex-start, center aligns logo and hamburger */
+    align-items: center;
     margin-bottom: 8px;
-    position: relative; /* ← needed for the dropdown menu to position correctly */
+    position: relative;
   }
 
   .logo-container {
@@ -861,7 +870,7 @@ footer p {
     color: white;
     background-color: var(--primary-color);
     padding: 1rem 0;
-    z-index: 1000;
+    z-index: 99999;
   }
 
   .nav-menu.active {
