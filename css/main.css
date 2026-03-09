@@ -145,6 +145,11 @@ p {
   margin-top: 4rem;
 }
 
+.bold {
+  font-weight: 900;
+  color: var(--primary-red);
+}
+
 .link a {
   text-decoration: underline var(--primary-color);
   font-weight: 600;
@@ -208,7 +213,7 @@ p {
   width: 250px;
   border-radius: 30px;
   border: 3px solid var(--black);
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
   display: inline-block;
@@ -218,6 +223,7 @@ p {
   display: block;
   margin: 0 auto;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .btn-endorsement:hover {
@@ -233,7 +239,7 @@ p {
   width: 250px;
   border-radius: 30px;
   border: 3px solid var(--black);
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
   display: inline-block;
@@ -243,6 +249,7 @@ p {
   display: block;
   margin: 0 auto;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .btn-past-candidates:hover {
@@ -372,6 +379,7 @@ nav {
   object-fit: cover;
   z-index: 0;
   pointer-events: none;
+  background-position: center;
 }
 
 /* Dark overlay on top of the video */
@@ -471,7 +479,8 @@ nav {
     url(../images/tennessee-map.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 180px 0;
+  background-position: center;
+  padding: 100px 0;
 }
 
 .tennessee-grid {
@@ -481,7 +490,7 @@ nav {
 }
 
 .tennessee-grid-item-left {
-  background-color: rgba(13, 142, 84, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
   border: 3px solid var(--primary-color);
   border-radius: 10px;
@@ -496,7 +505,8 @@ nav {
 .tennessee-grid-item-left h2 {
   font-size: 36px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 900;
+  color: var(--black);
   text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
     -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
 }
@@ -508,7 +518,7 @@ nav {
 }
 
 .tennessee-stat-grid-item {
-  background-color: rgba(13, 142, 84, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
   border: 3px solid var(--primary-color);
   border-radius: 10px;
@@ -626,6 +636,7 @@ nav {
     url(../images/rural-farm-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .nav-header-endorsement-pages {
@@ -638,6 +649,7 @@ nav {
     url(../images/background-farm-endorsement-page.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .nav-menu-pages {
@@ -784,7 +796,7 @@ nav {
   background-color: rgba(216, 210, 211, 0.79);
   border: 3px solid var(--primary-color);
   border-radius: 20px;
-  padding: 30px;
+  padding: 30px 30px 50px 30px;
   box-shadow: var(--image-shadow);
   margin-top: -4rem;
 }
@@ -792,18 +804,20 @@ nav {
 .apply-for-endorsement-text h2 {
   text-align: center;
   margin-top: -0.3rem;
+  margin-bottom: 2rem;
 }
 
 .apply-for-endorsement-text p {
-  text-align: center;
-  margin-bottom: 2rem;
+  margin: 0.5rem;
+  line-height: 1.5;
+  font-size: 18px;
 }
 
 .about-endorsement-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .about-endorsement-grid-item {
@@ -818,12 +832,16 @@ nav {
   text-align: center;
   margin: 0;
   color: var(--white);
+  margin-bottom: 2rem;
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
 }
 
 .about-endorsement-grid-item p {
   text-align: center;
-
   color: var(--white);
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
 }
 
 /* ==========================================
@@ -1264,6 +1282,11 @@ footer p {
     height: 500px;
     display: block;
     margin: 0 auto;
+  }
+
+  /* Endorsement Page Adjustments */
+  .about-endorsement-grid {
+    grid-template-columns: 1fr;
   }
 
   /* Footer Adjustments */
