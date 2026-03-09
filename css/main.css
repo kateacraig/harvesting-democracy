@@ -3,7 +3,7 @@
   /* Brand Colors */
   --white: #ffffff;
   --black: #000000;
-  --primary-color: #255f3e;
+  --primary-color: rgba(37, 95, 62);
   --primary-red: rgb(172, 13, 13);
   --primary-blue: rgb(3, 3, 235);
 
@@ -198,6 +198,56 @@ p {
 .btn-donate:hover {
   background-color: var(--white);
   border: 1.5px solid var(--primary-color);
+  color: var(--white);
+}
+
+.btn-endorsement {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.btn-endorsement:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
+.btn-past-candidates {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.btn-past-candidates:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
   color: var(--white);
 }
 
@@ -566,7 +616,7 @@ nav {
    Pages Header Content
    ========================================== */
 /* All Pages Other Than Home Header */
-.nav-header-pages {
+.nav-header-about-pages {
   padding: 20px 0;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.6),
@@ -578,8 +628,36 @@ nav {
   background-size: cover;
 }
 
+.nav-header-endorsement-pages {
+  padding: 20px 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../images/background-farm-endorsement-page.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .nav-menu-pages {
   margin-top: -30px;
+}
+
+.nav-menu-pages {
+  margin-top: -30px;
+  padding: 30px 0;
+}
+
+.nav-menu-pages > li > a {
+  color: var(--white);
+  text-shadow: -1px -1px 0 var(--primary-color), 1px -1px 0 var(--primary-color),
+    -1px 1px 0 var(--primary-color), 1px 1px 0 var(--primary-color);
+  font-weight: 900;
+  padding: 1.1rem 0.5rem;
+  display: block;
+  font-size: 1.6rem;
+  padding-bottom: 0.75rem;
 }
 
 .logo-container-pages img {
@@ -700,6 +778,55 @@ nav {
 }
 
 /* ==========================================
+   Endorsement Page
+   ========================================== */
+.apply-for-endorsement-text {
+  background-color: rgba(216, 210, 211, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: -4rem;
+}
+
+.apply-for-endorsement-text h2 {
+  text-align: center;
+  margin-top: -0.3rem;
+}
+
+.apply-for-endorsement-text p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-endorsement-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 4rem;
+}
+
+.about-endorsement-grid-item {
+  background-color: rgba(37, 95, 62, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
+}
+
+.about-endorsement-grid-item h3 {
+  text-align: center;
+  margin: 0;
+  color: var(--white);
+}
+
+.about-endorsement-grid-item p {
+  text-align: center;
+
+  color: var(--white);
+}
+
+/* ==========================================
    Footer
    ========================================== */
 footer {
@@ -799,6 +926,12 @@ footer p {
   padding: 0 0 20px 0;
   text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
     -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+.important-links {
+  list-style: none;
+  padding: 0;
+  text-align: left;
 }
 
 .important-links li {
