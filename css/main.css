@@ -159,6 +159,10 @@ p {
   color: var(--primary-color);
 }
 
+.green {
+  color: var(--primary-color);
+}
+
 .link a {
   text-decoration: underline var(--primary-color);
   font-weight: 600;
@@ -933,16 +937,26 @@ nav {
   margin-top: 2rem;
 }
 
-.endorsed-candidates-grid-item p {
+.endorsed-candidates-grid-item a {
   text-align: right;
   font-weight: 700;
   font-size: 20px;
   margin: 0;
   line-height: 2;
+  display: flex;
+  justify-content: right;
+  align-items: column;
 }
 
-.endorsed-candidates-grid-item p:hover {
+.endorsed-candidates-grid-item a:hover {
   color: var(--primary-color);
+}
+
+.endorsed-candidates-grid-item-text p {
+  font-weight: 400;
+  text-align: left;
+  color: var(--primary-color);
+  font-size: 18px;
 }
 
 /* ==========================================
