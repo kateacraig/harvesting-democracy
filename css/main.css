@@ -701,6 +701,19 @@ nav {
   background-position: center;
 }
 
+.nav-header-endorsement-candidates-pages {
+  padding: 20px 0;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../images/background-farm-endorsed-candidates.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .nav-menu-pages {
   margin-top: -30px;
 }
@@ -891,6 +904,22 @@ nav {
   color: var(--white);
   text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
     -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+.endorsed-candidates-elements {
+  background-color: rgba(216, 210, 211, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px 30px 50px 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: -12rem;
+  margin-bottom: 2rem;
+}
+
+.endorsed-candidates-grid {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  grid-gap: 2.5rem;
 }
 
 /* ==========================================
