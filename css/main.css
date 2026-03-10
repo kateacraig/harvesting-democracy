@@ -147,7 +147,16 @@ p {
 
 .bold {
   font-weight: 900;
+}
+
+.bold-red {
+  font-weight: 900;
   color: var(--primary-red);
+}
+
+.bold-green {
+  font-weight: 900;
+  color: var(--primary-color);
 }
 
 .link a {
@@ -227,6 +236,32 @@ p {
 }
 
 .btn-endorsement:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
+.btn-endorsement-application {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.btn-endorsement-application:hover {
   background-color: var(--black);
   border: 3px solid var(--white);
   color: var(--white);
@@ -648,6 +683,19 @@ nav {
       rgba(0, 0, 0, 0.3)
     ),
     url(../images/background-farm-endorsement-page.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-header-endorsement-application-pages {
+  padding: 20px 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../images/background-dirt-road-endorsement-application.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
