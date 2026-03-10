@@ -918,8 +918,31 @@ nav {
 
 .endorsed-candidates-grid {
   display: grid;
-  grid-template-columns: 0.5fr 2fr;
+  grid-template-columns: 0.2fr 2fr;
   grid-gap: 2.5rem;
+}
+
+.endorsed-candidates-grid-item h2 {
+  font-size: 35px;
+}
+
+.endorsed-candidates-grid-item h3 {
+  text-align: right;
+  font-weight: 900;
+  font-size: 35px;
+  margin-top: 2rem;
+}
+
+.endorsed-candidates-grid-item p {
+  text-align: right;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+  line-height: 2;
+}
+
+.endorsed-candidates-grid-item p:hover {
+  color: var(--primary-color);
 }
 
 /* ==========================================
