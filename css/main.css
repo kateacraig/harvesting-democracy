@@ -858,6 +858,10 @@ nav {
 /* ==========================================
    Endorsement Page
    ========================================== */
+.endorsed-candidates-years {
+  margin-top: 7rem;
+}
+
 .apply-for-endorsement-text {
   background-color: rgba(216, 210, 211, 0.79);
   border: 3px solid var(--primary-color);
@@ -869,7 +873,6 @@ nav {
 
 .apply-for-endorsement-text h2 {
   text-align: center;
-  margin-top: -0.3rem;
   margin-bottom: 2rem;
 }
 
@@ -924,6 +927,7 @@ nav {
   display: grid;
   grid-template-columns: 0.2fr 2fr;
   grid-gap: 2.5rem;
+  margin-top: -2rem;
 }
 
 .endorsed-candidates-grid-item h2 {
@@ -957,6 +961,17 @@ nav {
   text-align: left;
   color: var(--primary-color);
   font-size: 18px;
+}
+
+.endorsed-candidate-image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.endorsed-candidate-image-grid-item img {
+  width: 260px;
+  height: auto;
 }
 
 /* ==========================================
