@@ -297,6 +297,58 @@ p {
   color: var(--white);
 }
 
+.btn-voter-registration-check {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.btn-voter-registration-check:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
+.btn-voter-registration {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.btn-voter-registration:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
 .btn-donate-footer {
   background-color: var(--white);
   color: var(--black);
@@ -718,6 +770,19 @@ nav {
   background-position: center;
 }
 
+.nav-header-elections-pages {
+  padding: 20px 0;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url(../images/background-polling-station-elections.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .nav-menu-pages {
   margin-top: -30px;
 }
@@ -973,6 +1038,39 @@ nav {
 .endorsed-candidate-image-grid-item img {
   width: 270px;
   height: auto;
+}
+
+/* ==========================================
+   Elections Page
+   ========================================== */
+.elections-content {
+  background-color: rgba(216, 210, 211, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px 30px 50px 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: -4rem;
+}
+
+.registered-to-vote h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: -1rem;
+}
+
+.register-to-vote-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.register-to-vote-grid-item {
+  background-color: rgba(37, 95, 62, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
 }
 
 /* ==========================================
