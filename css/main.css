@@ -874,6 +874,7 @@ nav {
 .apply-for-endorsement-text h2 {
   text-align: center;
   margin-bottom: 2rem;
+  margin-top: -1rem;
 }
 
 .apply-for-endorsement-text p {
@@ -970,7 +971,7 @@ nav {
 }
 
 .endorsed-candidate-image-grid-item img {
-  width: 260px;
+  width: 270px;
   height: auto;
 }
 
@@ -1287,6 +1288,33 @@ footer p {
     flex: 0 0 25%;
     min-width: 25%;
   }
+
+  .pages-header-container h1 {
+    font-size: 85px;
+  }
+
+  /* Endorsed Candidate Adjustments */
+  .endorsed-candidates-grid-item h2 {
+    font-size: 32px;
+  }
+
+  .apply-for-endorsement-text h2 {
+    font-size: 32px;
+    margin-top: -0.5rem;
+  }
+
+  .endorsed-candidates-grid-item h3 {
+    font-size: 32px;
+    margin-top: 1.5rem;
+  }
+
+  .endorsed-candidate-image-grid {
+    grid-gap: 1rem;
+  }
+
+  .endorsed-candidate-image-grid-item img {
+    width: 200px;
+  }
 }
 
 /* 940px breakpoint */
@@ -1369,6 +1397,10 @@ footer p {
     font-size: 22px;
   }
 
+  .pages-header-container h1 {
+    font-size: 65px;
+  }
+
   /* Endorsed Candidates Section Adjustments */
 
   .endorsed-candidate-header h2 {
@@ -1415,8 +1447,30 @@ footer p {
   }
 
   /* Endorsement Page Adjustments */
+  .about-endorsement-grid-item {
+    padding: 15px;
+  }
+
+  .btn-endorsement {
+    width: 210px;
+    font-size: 1rem;
+  }
+
+  .btn-past-candidates {
+    width: 220px;
+    font-size: 1rem;
+  }
+
   .about-endorsement-grid {
     grid-template-columns: 1fr;
+  }
+
+  .endorsed-candidate-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .endorsed-candidate-image-grid-item img {
+    width: 200px;
   }
 
   /* Footer Adjustments */
@@ -1439,6 +1493,11 @@ footer p {
 
   .footer-follow-mobile h4 {
     font-size: 1.3rem;
+  }
+
+  .important-links {
+    text-align: center;
+    margin-bottom: -2rem;
   }
 
   .footer-social-icons {
