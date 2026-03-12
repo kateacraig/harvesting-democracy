@@ -163,6 +163,11 @@ p {
   color: var(--primary-color);
 }
 
+.blue-bold {
+  font-weight: 900;
+  color: var(--primary-blue) !important;
+}
+
 .link a {
   text-decoration: underline var(--primary-color);
   font-weight: 600;
@@ -194,6 +199,56 @@ p {
 
 .btn:hover {
   background-color: var(--primary-color);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.btn-application-contact {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.btn-application-contact:hover {
+  background-color: var(--black);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.btn-donate-contact {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.btn-donate-contact:hover {
+  background-color: var(--black);
   border: 1.5px solid var(--white);
   color: var(--white);
 }
@@ -834,6 +889,22 @@ nav {
   background-position: center;
 }
 
+.nav-header-contact-pages {
+  padding: 20px 0;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url(../images/background-mailbox-contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .nav-menu-pages {
   margin-top: -30px;
 }
@@ -1245,6 +1316,76 @@ nav {
 }
 
 /* ==========================================
+   Contact Page
+   ========================================== */
+.contact-text-box {
+  background-color: rgba(216, 210, 211, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px 30px 50px 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: -4rem;
+}
+
+.contact-text-box h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: -1rem;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+}
+
+.contact-text-box p {
+  margin: 0.5rem;
+  line-height: 1.5;
+  font-size: 18px;
+  text-shadow: -0.2px -0.2px 0 var(--white), 0.2px -0.2px 0 var(--white),
+    -0.2px 0.2px 0 var(--white), 0.2px 0.2px 0 var(--white);
+  text-align: center;
+}
+
+.contact-text-box-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.contact-text-box-grid-item {
+  background-color: rgba(37, 95, 62, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: 1rem;
+}
+
+.contact-text-box-grid-item h3 {
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+.contact-text-box-grid-item p {
+  text-align: center;
+  color: var(--white);
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+  margin-top: 1rem;
+}
+
+.contact-slogan p {
+  font-size: 24px;
+  color: var(--black);
+  text-align: center;
+  text-shadow: -0.2px -0.2px 0 var(--white), 0.2px -0.2px 0 var(--white),
+    -0.2px 0.2px 0 var(--white), 0.2px 0.2px 0 var(--white);
+  margin-top: 4rem;
+  font-weight: 900;
+}
+
+/* ==========================================
    Footer
    ========================================== */
 footer {
@@ -1593,6 +1734,14 @@ footer p {
   .polling-location-box h3 {
     font-size: 28px;
   }
+
+  .contact-text-box-grid-item h3 {
+    font-size: 28px;
+  }
+
+  .contact-slogan p {
+    margin-top: 3rem;
+  }
 }
 
 /* 940px breakpoint */
@@ -1783,6 +1932,24 @@ footer p {
   .polling-location-box {
     padding: 15px;
     height: 380px;
+  }
+
+  .contact-text-box-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-text-box-grid-item {
+    padding: 15px;
+  }
+
+  .btn-application-contact {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .btn-donate-contact {
+    width: 200px;
+    font-size: 1rem;
   }
 
   /* Footer Adjustments */
