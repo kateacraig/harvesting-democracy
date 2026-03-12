@@ -1746,6 +1746,24 @@ footer p {
 
 /* 940px breakpoint */
 @media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    gap: 0;
+    color: white;
+    background-color: var(--black);
+    padding: 1rem 0;
+    z-index: 99999;
+    max-height: calc(
+      100vh - 100px
+    ); /* ← limits height to viewport minus header */
+    overflow-y: auto; /* ← makes menu scrollable if items overflow */
+  }
 }
 
 /* 468px breakpoint */
