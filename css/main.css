@@ -349,6 +349,57 @@ p {
   color: var(--white);
 }
 
+.btn-polling-location-check {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.btn-polling-location-check:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
+.btn-sample-ballot {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.btn-sample-ballot:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
 .btn-donate-footer {
   background-color: var(--white);
   color: var(--black);
@@ -1057,6 +1108,14 @@ nav {
   padding: 0;
   text-align: center;
   margin-top: -1rem;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+}
+
+.registered-to-vote p {
+  text-shadow: -0.2px -0.2px 0 var(--black), 0.2px -0.2px 0 var(--black),
+    -0.2px 0.2px 0 var(--black), 0.2px 0.2px 0 var(--black);
+  text-align: center;
 }
 
 .register-to-vote-grid {
@@ -1071,6 +1130,118 @@ nav {
   border-radius: 20px;
   padding: 30px;
   box-shadow: var(--image-shadow);
+}
+
+.register-to-vote-grid-item h3 {
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+.register-to-vote-grid-item p {
+  margin: 0;
+  margin-top: 2rem;
+  color: var(--white);
+  text-align: center;
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+.register-to-vote-block-text {
+  height: 60px;
+}
+
+.polling-location h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: 4rem;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+}
+
+.polling-location p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-shadow: -0.2px -0.2px 0 var(--black), 0.2px -0.2px 0 var(--black),
+    -0.2px 0.2px 0 var(--black), 0.2px 0.2px 0 var(--black);
+}
+
+.polling-location-box {
+  background-color: rgba(37, 95, 62, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: 1rem;
+  height: 240px;
+}
+
+.polling-location-box h3 {
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+.polling-location-box p {
+  margin: 0;
+  margin-top: 2rem;
+  color: var(--white);
+  text-align: center;
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+.sample-ballot {
+  margin-top: 4rem;
+}
+
+.sample-ballot h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: 4rem;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+}
+
+.sample-ballot p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-shadow: -0.2px -0.2px 0 var(--black), 0.2px -0.2px 0 var(--black),
+    -0.2px 0.2px 0 var(--black), 0.2px 0.2px 0 var(--black);
+}
+
+.review-sample-ballot {
+  background-color: rgba(37, 95, 62, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: 1rem;
+  height: 200px;
+}
+
+.review-sample-ballot h3 {
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+.review-sample-ballot p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-shadow: -0.2px -0.2px 0 var(--black), 0.2px -0.2px 0 var(--black),
+    -0.2px 0.2px 0 var(--black), 0.2px 0.2px 0 var(--black);
 }
 
 /* ==========================================
@@ -1413,6 +1584,15 @@ footer p {
   .endorsed-candidate-image-grid-item img {
     width: 200px;
   }
+
+  /* Elections Page Adjustments */
+  .register-to-vote-grid-item h3 {
+    font-size: 28px;
+  }
+
+  .polling-location-box h3 {
+    font-size: 28px;
+  }
 }
 
 /* 940px breakpoint */
@@ -1569,6 +1749,40 @@ footer p {
 
   .endorsed-candidate-image-grid-item img {
     width: 200px;
+  }
+
+  /* Elections Page Adjustments */
+  .register-to-vote-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .register-to-vote-grid-item {
+    padding: 15px;
+  }
+
+  .btn-voter-registration-check {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .btn-voter-registration {
+    width: 200px;
+    font-size: 1.1rem;
+  }
+
+  .btn-polling-location-check {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .btn-sample-ballot {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .polling-location-box {
+    padding: 15px;
+    height: 380px;
   }
 
   /* Footer Adjustments */
