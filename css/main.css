@@ -152,6 +152,8 @@ p {
 .bold-red {
   font-weight: 900;
   color: var(--primary-red);
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
 }
 
 .bold-green {
@@ -166,6 +168,8 @@ p {
 .blue-bold {
   font-weight: 900;
   color: var(--primary-blue) !important;
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
 }
 
 .link a {
@@ -1629,17 +1633,18 @@ footer p {
     );
     z-index: 1;
     pointer-events: none;
-    height: 100vh;
+    height: 45vh;
   }
 
   .nav-header {
-    height: 100vh; /* ← fixed height instead of min-height, locks to video size */
+    height: 45vh; /* ← fixed height instead of min-height, locks to video size */
     min-height: unset;
     overflow: hidden; /* ← clips anything that extends beyond the video */
+    margin-bottom: -1rem;
   }
 
   .bg-video {
-    height: 100vh;
+    height: 45vh;
   }
 
   .background-image {
@@ -1703,6 +1708,12 @@ footer p {
     font-size: 85px;
   }
 
+  .kate-grid-item-image {
+    position: static;
+    top: 2rem;
+    align-self: start;
+  }
+
   /* Endorsed Candidate Adjustments */
   .endorsed-candidates-grid-item h2 {
     font-size: 32px;
@@ -1745,7 +1756,11 @@ footer p {
 }
 
 /* 935px breakpoint */
-@media (max-width: 768px) {
+@media (max-width: 935px) {
+  .container {
+    padding: 0 2rem;
+  }
+
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -1755,14 +1770,194 @@ footer p {
     right: 0;
     width: 100%;
     gap: 0;
-    color: white;
+    color: var(--white);
     background-color: var(--black);
     padding: 1rem 0;
     z-index: 99999;
-    max-height: calc(
-      100vh - 100px
-    ); /* ← limits height to viewport minus header */
     overflow-y: auto; /* ← makes menu scrollable if items overflow */
+  }
+
+  .hero {
+    padding: 50px 0 60px 0;
+  }
+
+  .nav-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(255, 255, 255, 0.2),
+      rgba(0, 0, 0, 0.4)
+    );
+    z-index: 1;
+    pointer-events: none;
+    height: 50vh;
+  }
+
+  /* Video background wrapper */
+  .nav-header {
+    position: relative;
+    height: 50vh;
+    min-height: unset;
+    padding-top: 1rem;
+    overflow: hidden;
+  }
+
+  /* The actual background video */
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    background-position: center;
+  }
+
+  .contact-text-box {
+    background-color: rgba(216, 210, 211, 0.79);
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 30px 15px 50px 15px;
+    box-shadow: var(--image-shadow);
+    margin-top: -4rem;
+  }
+
+  .btn-donate-contact {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .btn-application-contact {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .btn-donate-footer {
+    width: 80px;
+  }
+
+  .contact-text-box-grid-item h3 {
+    font-size: 20px;
+  }
+
+  .contact-text-box-grid-item p {
+    font-size: 14px;
+  }
+
+  footer h3 {
+    font-size: 28px;
+  }
+
+  .footer-donate p {
+    font-size: 14px;
+  }
+}
+
+/* 820px breakpoint */
+@media (max-width: 820px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .nav-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(255, 255, 255, 0.2),
+      rgba(0, 0, 0, 0.4)
+    );
+    z-index: 1;
+    pointer-events: none;
+    height: 50vh;
+  }
+
+  .nav-header {
+    position: relative;
+    min-height: unset;
+    height: 50vh;
+    padding-top: 2rem;
+    overflow: hidden;
+    margin-bottom: -4px;
+  }
+
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh !important;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    background-position: center;
+  }
+
+  .hero {
+    padding: 10px 0 20px 0;
+  }
+
+  .tennessee {
+    padding-top: 20px 0 20px 0 !important;
+    margin-top: -2rem;
+  }
+
+  .btn-donate-footer {
+    width: 60px;
+  }
+}
+
+/* 768px breakpoint */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .nav-header {
+    position: relative;
+    height: 65vh !important;
+    min-height: unset;
+    padding-top: 1rem;
+    overflow: hidden;
+  }
+
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65vh !important;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    background-position: center;
+  }
+
+  .hero {
+    padding: 10px 0 20px 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 0.1rem;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .important-links {
+    text-align: center;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -1778,11 +1973,40 @@ footer p {
   }
 
   .hero {
-    padding: 20px 0 !important; /* ← forces override of section and section.hero rules */
+    padding: 40px 0 !important;
   }
 
+  /* Video background wrapper */
   .nav-header {
-    min-height: 100vh;
+    position: relative;
+    height: 100vh !important;
+    padding-top: 1rem;
+    min-height: unset;
+    overflow: hidden;
+  }
+
+  /* The actual background video */
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh !important;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    background-position: center;
+  }
+
+  /* Dark overlay on top of the video */
+  .nav-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+    pointer-events: none;
+    height: 100vh !important;
   }
 
   .nav-menu-pages {
@@ -1793,8 +2017,8 @@ footer p {
     margin-top: 0;
   }
 
-  .bg-video {
-    height: 100vh;
+  .tennessee {
+    margin-top: -1rem;
   }
 
   .hero h1 {
@@ -1819,6 +2043,17 @@ footer p {
     font-size: 1.2rem;
     display: block;
     margin: 0 auto;
+  }
+
+  .pages-header h1 {
+    font-weight: 700;
+    font-size: 55px !important;
+    color: var(--primary-color);
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+      -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+    margin-top: -10px;
   }
 
   /* Tennsssee Section Adjustments */
@@ -1868,7 +2103,9 @@ footer p {
   }
 
   .about-us-video iframe {
-    width: 300px;
+    width: 270px;
+    display: block;
+    margin: 0 auto;
   }
 
   .about-section h2 {
@@ -1970,6 +2207,10 @@ footer p {
     font-size: 1rem;
   }
 
+  .contact-text-box {
+    padding: 30px 15px 30px 15px;
+  }
+
   /* Footer Adjustments */
   footer {
     text-align: center;
@@ -2012,5 +2253,40 @@ footer p {
 
   .footer-copyright {
     font-size: 12px;
+  }
+}
+
+/* 390px breakpoint */
+@media (max-width: 390px) {
+  .tennessee-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  .about-us-video iframe {
+    width: 250px;
+  }
+
+  .endorsed-candidate-image-grid-item img {
+    width: 150px !important;
+    height: auto;
+  }
+
+  .contact-text-box {
+    padding: 30px 15px 30px 15px;
+  }
+
+  .contact-text-box p {
+    margin: 0.5rem;
+    line-height: 1.5;
+    font-size: 16px;
+    text-shadow: -0.2px -0.2px 0 var(--white), 0.2px -0.2px 0 var(--white),
+      -0.2px 0.2px 0 var(--white), 0.2px 0.2px 0 var(--white);
+    text-align: center;
+  }
+
+  .contact-text-box-grid-item p {
+    font-weight: 300;
   }
 }
